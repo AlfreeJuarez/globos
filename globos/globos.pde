@@ -1,12 +1,16 @@
 class Globo
 {
   float x, y,vx,vy;
+  color c;
   Globo (float _x, float _y)
   {
    x=_x;
    y=_y; 
    vx=random(-0.25,0.25);
    vy=random(-2,-0.5);
+   c = color(random(100,255),
+             random(100,255),
+             random(0,255));
   }
 
   void update()
@@ -17,6 +21,7 @@ class Globo
 
   void dibujate()
   {
+    fill(c);
       ellipse(x,y,100,100);
   }
   
